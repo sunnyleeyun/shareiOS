@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043816C21EA0D4970002E22C /* cucu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 043816C11EA0D4970002E22C /* cucu.jpeg */; };
+		043816C41EA0ED760002E22C /* PurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043816C31EA0ED760002E22C /* PurseViewController.swift */; };
 		044027441E9D2DB900C5E030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027431E9D2DB900C5E030 /* AppDelegate.swift */; };
-		044027461E9D2DB900C5E030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027451E9D2DB900C5E030 /* ViewController.swift */; };
+		044027461E9D2DB900C5E030 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027451E9D2DB900C5E030 /* MapViewController.swift */; };
 		044027491E9D2DB900C5E030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044027471E9D2DB900C5E030 /* Main.storyboard */; };
 		0440274B1E9D2DB900C5E030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0440274A1E9D2DB900C5E030 /* Assets.xcassets */; };
 		0440274E1E9D2DB900C5E030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0440274C1E9D2DB900C5E030 /* LaunchScreen.storyboard */; };
+		044027571E9D303900C5E030 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027551E9D303900C5E030 /* BaseViewController.swift */; };
+		044027581E9D303900C5E030 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027561E9D303900C5E030 /* MenuViewController.swift */; };
+		0440275A1E9DCFD900C5E030 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027591E9DCFD900C5E030 /* ListViewController.swift */; };
+		0440275C1E9DDFA600C5E030 /* CustomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440275B1E9DDFA600C5E030 /* CustomListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043816C11EA0D4970002E22C /* cucu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cucu.jpeg; sourceTree = "<group>"; };
+		043816C31EA0ED760002E22C /* PurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurseViewController.swift; sourceTree = "<group>"; };
 		044027401E9D2DB900C5E030 /* shareiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044027431E9D2DB900C5E030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		044027451E9D2DB900C5E030 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		044027451E9D2DB900C5E030 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		044027481E9D2DB900C5E030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0440274A1E9D2DB900C5E030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0440274D1E9D2DB900C5E030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0440274F1E9D2DB900C5E030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044027551E9D303900C5E030 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		044027561E9D303900C5E030 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		044027591E9DCFD900C5E030 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		0440275B1E9DDFA600C5E030 /* CustomListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				044027431E9D2DB900C5E030 /* AppDelegate.swift */,
-				044027451E9D2DB900C5E030 /* ViewController.swift */,
+				044027551E9D303900C5E030 /* BaseViewController.swift */,
+				044027561E9D303900C5E030 /* MenuViewController.swift */,
 				044027471E9D2DB900C5E030 /* Main.storyboard */,
+				044027451E9D2DB900C5E030 /* MapViewController.swift */,
 				0440274A1E9D2DB900C5E030 /* Assets.xcassets */,
+				044027591E9DCFD900C5E030 /* ListViewController.swift */,
+				043816C31EA0ED760002E22C /* PurseViewController.swift */,
 				0440274C1E9D2DB900C5E030 /* LaunchScreen.storyboard */,
 				0440274F1E9D2DB900C5E030 /* Info.plist */,
+				0440275B1E9DDFA600C5E030 /* CustomListCell.swift */,
+				043816C11EA0D4970002E22C /* cucu.jpeg */,
 			);
 			path = shareiOS;
 			sourceTree = "<group>";
@@ -125,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0440274E1E9D2DB900C5E030 /* LaunchScreen.storyboard in Resources */,
+				043816C21EA0D4970002E22C /* cucu.jpeg in Resources */,
 				0440274B1E9D2DB900C5E030 /* Assets.xcassets in Resources */,
 				044027491E9D2DB900C5E030 /* Main.storyboard in Resources */,
 			);
@@ -137,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044027461E9D2DB900C5E030 /* ViewController.swift in Sources */,
+				044027461E9D2DB900C5E030 /* MapViewController.swift in Sources */,
 				044027441E9D2DB900C5E030 /* AppDelegate.swift in Sources */,
+				043816C41EA0ED760002E22C /* PurseViewController.swift in Sources */,
+				0440275C1E9DDFA600C5E030 /* CustomListCell.swift in Sources */,
+				044027571E9D303900C5E030 /* BaseViewController.swift in Sources */,
+				0440275A1E9DCFD900C5E030 /* ListViewController.swift in Sources */,
+				044027581E9D303900C5E030 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +328,7 @@
 				044027541E9D2DB900C5E030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
