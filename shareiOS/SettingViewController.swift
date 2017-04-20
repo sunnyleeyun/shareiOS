@@ -1,25 +1,25 @@
 //
-//  PurseViewController.swift
+//  SettingViewController.swift
 //  shareiOS
 //
-//  Created by Mac on 2017/4/14.
+//  Created by Mac on 2017/4/19.
 //  Copyright © 2017年 Mac. All rights reserved.
 //
 
 import UIKit
 
-class PurseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SettingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    let items1 = ["帳號","常用地址","緊急聯絡人"]
+    let items2 = ["用戶指南","給享卡好評","法律條款","關於享卡"]
+    let items3 = ["登出"]
     
-    let items1 = ["支付方式"]
-    let items2 = ["享幣","優惠券"]
-    let items3 = ["保險"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let fullScreenSize = UIScreen.main.bounds.size
 
+        let fullScreenSize = UIScreen.main.bounds.size
+        
         
         let myTableView = UITableView(frame: CGRect(
             x: 0, y: 20,
@@ -50,24 +50,21 @@ class PurseViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // 加入到畫面中
         self.view.addSubview(myTableView)
-        
-        
-        // Do any additional setup after loading the view.
+
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-  
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return [1,2,1][section]
+        return [3,4,1][section]
         
     }
     
@@ -87,8 +84,17 @@ class PurseViewController: UIViewController, UITableViewDataSource, UITableViewD
         } else if indexPath.section == 2{
             cell.textLabel?.text = items3[indexPath.row]
         }
-    
-
+        
+        //        let cell = PurseTableview.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
+        //        if indexPath.section == 0{
+        //            cell.textLabel?.text = items1[indexPath.row]
+        //        } else if indexPath.section == 1{
+        //            cell.textLabel?.text = items2[indexPath.row]
+        //        } else {
+        //            cell.textLabel?.text = items3[indexPath.row]
+        //
+        //        }
+        
         
         
         return cell
@@ -98,6 +104,8 @@ class PurseViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
     }
+
+
     /*
     // MARK: - Navigation
 
