@@ -39,7 +39,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         case 2:
             print("Car\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("ListViewControllerID")
+            self.openViewControllerBasedOnIdentifier("CarViewControllerID")
             
             break
         case 3:

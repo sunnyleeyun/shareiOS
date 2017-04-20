@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043816C21EA0D4970002E22C /* cucu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 043816C11EA0D4970002E22C /* cucu.jpeg */; };
 		043816C41EA0ED760002E22C /* PurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043816C31EA0ED760002E22C /* PurseViewController.swift */; };
 		044027441E9D2DB900C5E030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027431E9D2DB900C5E030 /* AppDelegate.swift */; };
 		044027461E9D2DB900C5E030 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027451E9D2DB900C5E030 /* MapViewController.swift */; };
@@ -18,11 +17,12 @@
 		044027581E9D303900C5E030 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027561E9D303900C5E030 /* MenuViewController.swift */; };
 		0440275A1E9DCFD900C5E030 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027591E9DCFD900C5E030 /* ListViewController.swift */; };
 		0440275C1E9DDFA600C5E030 /* CustomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440275B1E9DDFA600C5E030 /* CustomListCell.swift */; };
+		0499FAE31EA8B4740082ADB8 /* CustomCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499FAE21EA8B4740082ADB8 /* CustomCarCell.swift */; };
+		0499FAE51EA8BA4F0082ADB8 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */; };
 		04A2C8761EA7B4AA00BD7E3A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043816C11EA0D4970002E22C /* cucu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cucu.jpeg; sourceTree = "<group>"; };
 		043816C31EA0ED760002E22C /* PurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurseViewController.swift; sourceTree = "<group>"; };
 		044027401E9D2DB900C5E030 /* shareiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044027431E9D2DB900C5E030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +35,8 @@
 		044027561E9D303900C5E030 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		044027591E9DCFD900C5E030 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0440275B1E9DDFA600C5E030 /* CustomListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomListCell.swift; sourceTree = "<group>"; };
+		0499FAE21EA8B4740082ADB8 /* CustomCarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCarCell.swift; sourceTree = "<group>"; };
+		0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,11 +78,12 @@
 				0440274A1E9D2DB900C5E030 /* Assets.xcassets */,
 				044027591E9DCFD900C5E030 /* ListViewController.swift */,
 				043816C31EA0ED760002E22C /* PurseViewController.swift */,
+				0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */,
 				04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */,
 				0440274C1E9D2DB900C5E030 /* LaunchScreen.storyboard */,
 				0440274F1E9D2DB900C5E030 /* Info.plist */,
 				0440275B1E9DDFA600C5E030 /* CustomListCell.swift */,
-				043816C11EA0D4970002E22C /* cucu.jpeg */,
+				0499FAE21EA8B4740082ADB8 /* CustomCarCell.swift */,
 			);
 			path = shareiOS;
 			sourceTree = "<group>";
@@ -146,7 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0440274E1E9D2DB900C5E030 /* LaunchScreen.storyboard in Resources */,
-				043816C21EA0D4970002E22C /* cucu.jpeg in Resources */,
 				0440274B1E9D2DB900C5E030 /* Assets.xcassets in Resources */,
 				044027491E9D2DB900C5E030 /* Main.storyboard in Resources */,
 			);
@@ -164,7 +166,9 @@
 				043816C41EA0ED760002E22C /* PurseViewController.swift in Sources */,
 				04A2C8761EA7B4AA00BD7E3A /* SettingViewController.swift in Sources */,
 				0440275C1E9DDFA600C5E030 /* CustomListCell.swift in Sources */,
+				0499FAE51EA8BA4F0082ADB8 /* CarViewController.swift in Sources */,
 				044027571E9D303900C5E030 /* BaseViewController.swift in Sources */,
+				0499FAE31EA8B4740082ADB8 /* CustomCarCell.swift in Sources */,
 				0440275A1E9DCFD900C5E030 /* ListViewController.swift in Sources */,
 				044027581E9D303900C5E030 /* MenuViewController.swift in Sources */,
 			);
