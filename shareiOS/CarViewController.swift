@@ -62,7 +62,6 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         cell.carType.text = self.typeCar[indexPath.row]
 
-        //cell.FinishOrNot.text = self.animals[indexPath.row]
         
         return cell
     }
