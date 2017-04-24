@@ -23,23 +23,25 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         let fullScreenSize = UIScreen.main.bounds.size
         
+
         // car text field
         var CarNumberTextField = UITextField(frame: CGRect(
-            x: 0, y: 350,
+            x: 0, y: 0,
             width: fullScreenSize.width, height: 40))
+
         CarNumberTextField.placeholder = "車牌號碼"
         CarNumberTextField.backgroundColor = UIColor.init(
             red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
         CarNumberTextField.textAlignment = .center
         CarNumberTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.15)
+            y: fullScreenSize.height * 0.55)
         self.view.addSubview(CarNumberTextField)
         
         
         // oil text field
         var OilTextField = UITextField(frame: CGRect(
-            x: 0, y: 400,
+            x: 0, y: 0,
             width: fullScreenSize.width, height: 40))
         OilTextField.placeholder = "加油種類"
         
@@ -56,13 +58,13 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         OilTextField.textAlignment = .center
         OilTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.15)
+            y: fullScreenSize.height * 0.65)
         self.view.addSubview(OilTextField)
 
         
         // car age text field
         var AgeTextField = UITextField(frame: CGRect(
-            x: 0, y: 450,
+            x: 0, y: 0,
             width: fullScreenSize.width, height: 40))
         AgeTextField.placeholder = "愛車年齡"
         
@@ -78,14 +80,14 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         AgeTextField.textAlignment = .center
         AgeTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.15)
+            y: fullScreenSize.height * 0.75)
         self.view.addSubview(AgeTextField)
         
         
         
         // car type text field
         var TypeTextField = UITextField(frame: CGRect(
-            x: 0, y: 500,
+            x: 0, y: 0,
             width: fullScreenSize.width, height: 40))
         TypeTextField.placeholder = "愛車種類"
         
@@ -101,13 +103,13 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         TypeTextField.textAlignment = .center
         TypeTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.15)
+            y: fullScreenSize.height * 0.85)
         self.view.addSubview(TypeTextField)
         
         
         // others
         var OthersTextField = UITextField(frame: CGRect(
-            x: 0, y: 550,
+            x: 0, y: 0,
             width: fullScreenSize.width, height: 40))
         OthersTextField.placeholder = "其他備註"
         OthersTextField.backgroundColor = UIColor.init(
@@ -115,7 +117,7 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         OthersTextField.textAlignment = .center
         OthersTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.15)
+            y: fullScreenSize.height * 0.95)
         self.view.addSubview(OthersTextField)
         
 
@@ -128,36 +130,45 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponentsInPickerView(
-        pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        if pickerView.tag == 1{
+            return 1
+        } else if pickerView.tag == 2{
+            return 1
+        }else if pickerView.tag == 3{
+            return 1
+        }
+        
         return 1
+        
     }
     
-  
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == oilPickerView{
+        if pickerView.tag == 1{
             return oil.count
-        } else if pickerView == agePickerView{
+        } else if pickerView.tag == 2{
             return age.count
-        }else if pickerView == typePickerView{
+        }else if pickerView.tag == 3{
             return type.count
         }
-
+        return 1
     }
+  
+   
     
     func pickerView(pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         // 設置為陣列 meals 的第 row 項資料
-        if pickerView == oilPickerView{
+        if pickerView.tag == 1{
             return oil[row]
-        } else if pickerView == agePickerView{
+        } else if pickerView.tag == 2{
             return age[row]
-        }else if pickerView == typePickerView{
+        }else if pickerView.tag == 3{
             return type[row]
         }
-        
-        //meals[row]
+        return ""
 
     }
     
