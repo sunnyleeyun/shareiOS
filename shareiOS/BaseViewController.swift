@@ -45,13 +45,13 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         case 3:
             print("Collection\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("PlayVC")
+            self.openViewControllerBasedOnIdentifier("CollectionViewControllerID")
             
             break
         case 4:
             print("Service\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("CarViewControllerID")
+            self.openViewControllerBasedOnIdentifier("ServiceViewControllerID")
             
             break
         case 5:
