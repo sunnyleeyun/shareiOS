@@ -24,6 +24,7 @@
 		0499FAE51EA8BA4F0082ADB8 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */; };
 		04A2C8761EA7B4AA00BD7E3A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */; };
 		04B2EC2D1EAC7E1B00068A4B /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2EC2C1EAC7E1B00068A4B /* AddCarViewController.swift */; };
+		6F934C7C52B29A586587FAB4 /* Pods_shareiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458ABCE19289D5298D0C7FBF /* Pods_shareiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,9 @@
 		0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		04B2EC2C1EAC7E1B00068A4B /* AddCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		0FAD21F3A3FAAE01880536B0 /* Pods-shareiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shareiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shareiOS/Pods-shareiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		458ABCE19289D5298D0C7FBF /* Pods_shareiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shareiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B943FCAFE3394A00B1AC83E0 /* Pods-shareiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shareiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-shareiOS/Pods-shareiOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F934C7C52B29A586587FAB4 /* Pods_shareiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 			children = (
 				044027421E9D2DB900C5E030 /* shareiOS */,
 				044027411E9D2DB900C5E030 /* Products */,
+				B32F89B75EF5BEF7667F2CAC /* Pods */,
+				C17EEEDFF6DB75AED1880DEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +163,23 @@
 			name = Collection;
 			sourceTree = "<group>";
 		};
+		B32F89B75EF5BEF7667F2CAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FAD21F3A3FAAE01880536B0 /* Pods-shareiOS.debug.xcconfig */,
+				B943FCAFE3394A00B1AC83E0 /* Pods-shareiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C17EEEDFF6DB75AED1880DEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				458ABCE19289D5298D0C7FBF /* Pods_shareiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044027521E9D2DB900C5E030 /* Build configuration list for PBXNativeTarget "shareiOS" */;
 			buildPhases = (
+				C09DB2C5CBECBA4BE3B4CF95 /* [CP] Check Pods Manifest.lock */,
 				0440273C1E9D2DB900C5E030 /* Sources */,
 				0440273D1E9D2DB900C5E030 /* Frameworks */,
 				0440273E1E9D2DB900C5E030 /* Resources */,
+				C2254E55B0C71AEA731FA4FA /* [CP] Embed Pods Frameworks */,
+				E3BCCC628FA02F7AC89631DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +250,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C09DB2C5CBECBA4BE3B4CF95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2254E55B0C71AEA731FA4FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shareiOS/Pods-shareiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BCCC628FA02F7AC89631DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shareiOS/Pods-shareiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0440273C1E9D2DB900C5E030 /* Sources */ = {
@@ -365,6 +440,7 @@
 		};
 		044027531E9D2DB900C5E030 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FAD21F3A3FAAE01880536B0 /* Pods-shareiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VJGEDW5SA9;
@@ -378,6 +454,7 @@
 		};
 		044027541E9D2DB900C5E030 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B943FCAFE3394A00B1AC83E0 /* Pods-shareiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VJGEDW5SA9;
