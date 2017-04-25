@@ -13,12 +13,17 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let fullScreenSize = UIScreen.main.bounds.size
 
+        
         let loginButton = FBSDKLoginButton()
         view.addSubview(loginButton)
         
-        loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width-32, height: 50)
-        
+        loginButton.frame = CGRect(x: 0, y: 0, width: view.frame.width-32, height: 50)
+        loginButton.center = CGPoint(
+            x: fullScreenSize.width * 0.5,
+            y: fullScreenSize.height * 0.85)
+
         loginButton.delegate = self
         // Do any additional setup after loading the view.
     }
