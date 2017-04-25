@@ -55,6 +55,24 @@
             </objects>
             <point key="canvasLocation" x="-713" y="-26"/>
         </scene>
+        <!--Service View Controller-->
+        <scene sceneID="DdH-Xk-R7a">
+            <objects>
+                <viewController id="wqk-Cq-Lld" customClass="ServiceViewController" customModule="shareiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JmE-6d-6zO"/>
+                        <viewControllerLayoutGuide type="bottom" id="RVY-0f-0Wl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aJg-N6-YpX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWJ-WL-Vqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447" y="-27"/>
+        </scene>
         <!--Setting View Controller-->
         <scene sceneID="YBo-X9-ZHD">
             <objects>
@@ -71,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qP1-z9-kF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="-25"/>
+            <point key="canvasLocation" x="2215" y="-27"/>
         </scene>
         <!--Add Car View Controller-->
         <scene sceneID="lgX-vl-xZZ">
@@ -209,6 +227,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndp-Wk-pZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13.6" y="-26.53673163418291"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="pAK-58-kTr">
+            <objects>
+                <viewController id="EmF-T9-mUc" customClass="CollectionViewController" customModule="shareiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RTv-Xn-frL"/>
+                        <viewControllerLayoutGuide type="bottom" id="KXY-U8-d8O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pSp-DS-wXT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvt-6f-Vue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="-26"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="MYG-B3-MJ3">
