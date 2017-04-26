@@ -20,6 +20,9 @@
 		0487CBA81EAFBB7700CAB025 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CBA71EAFBB7700CAB025 /* ServiceViewController.swift */; };
 		0487CBAB1EAFBB9000CAB025 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CBAA1EAFBB9000CAB025 /* CollectionViewController.swift */; };
 		0487CBAE1EAFBC3200CAB025 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CBAD1EAFBC3200CAB025 /* LogInViewController.swift */; };
+		0487CBB01EAFDFD000CAB025 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0487CBAF1EAFDFD000CAB025 /* GoogleService-Info.plist */; };
+		0487CBB31EB08D8400CAB025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CBB21EB08D8400CAB025 /* SignUpViewController.swift */; };
+		0487CBB51EB08D9A00CAB025 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CBB41EB08D9A00CAB025 /* VerificationViewController.swift */; };
 		0499FAE31EA8B4740082ADB8 /* CustomCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499FAE21EA8B4740082ADB8 /* CustomCarCell.swift */; };
 		0499FAE51EA8BA4F0082ADB8 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */; };
 		04A2C8761EA7B4AA00BD7E3A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */; };
@@ -43,6 +46,10 @@
 		0487CBA71EAFBB7700CAB025 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		0487CBAA1EAFBB9000CAB025 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0487CBAD1EAFBC3200CAB025 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		0487CBAF1EAFDFD000CAB025 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0487CBB11EAFEA3100CAB025 /* shareiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareiOS.entitlements; sourceTree = "<group>"; };
+		0487CBB21EB08D8400CAB025 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0487CBB41EB08D9A00CAB025 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		0499FAE21EA8B4740082ADB8 /* CustomCarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCarCell.swift; sourceTree = "<group>"; };
 		0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +92,11 @@
 		044027421E9D2DB900C5E030 /* shareiOS */ = {
 			isa = PBXGroup;
 			children = (
+				0487CBB11EAFEA3100CAB025 /* shareiOS.entitlements */,
 				044027431E9D2DB900C5E030 /* AppDelegate.swift */,
 				044027471E9D2DB900C5E030 /* Main.storyboard */,
 				0440274A1E9D2DB900C5E030 /* Assets.xcassets */,
-				0487CBAD1EAFBC3200CAB025 /* LogInViewController.swift */,
+				0487CBB61EB08DA200CAB025 /* SignIn */,
 				0487CBA21EAFBB1B00CAB025 /* Map */,
 				0487CBA31EAFBB3200CAB025 /* List */,
 				0487CBA41EAFBB4000CAB025 /* Purse */,
@@ -98,6 +106,7 @@
 				0487CBA61EAFBB5900CAB025 /* Setting */,
 				0440274C1E9D2DB900C5E030 /* LaunchScreen.storyboard */,
 				0440274F1E9D2DB900C5E030 /* Info.plist */,
+				0487CBAF1EAFDFD000CAB025 /* GoogleService-Info.plist */,
 			);
 			path = shareiOS;
 			sourceTree = "<group>";
@@ -163,6 +172,16 @@
 			name = Collection;
 			sourceTree = "<group>";
 		};
+		0487CBB61EB08DA200CAB025 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				0487CBAD1EAFBC3200CAB025 /* LogInViewController.swift */,
+				0487CBB21EB08D8400CAB025 /* SignUpViewController.swift */,
+				0487CBB41EB08D9A00CAB025 /* VerificationViewController.swift */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
 		B32F89B75EF5BEF7667F2CAC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +236,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = VJGEDW5SA9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -244,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0440274E1E9D2DB900C5E030 /* LaunchScreen.storyboard in Resources */,
+				0487CBB01EAFDFD000CAB025 /* GoogleService-Info.plist in Resources */,
 				0440274B1E9D2DB900C5E030 /* Assets.xcassets in Resources */,
 				044027491E9D2DB900C5E030 /* Main.storyboard in Resources */,
 			);
@@ -313,6 +338,8 @@
 				0440275C1E9DDFA600C5E030 /* CustomListCell.swift in Sources */,
 				04B2EC2D1EAC7E1B00068A4B /* AddCarViewController.swift in Sources */,
 				0499FAE51EA8BA4F0082ADB8 /* CarViewController.swift in Sources */,
+				0487CBB31EB08D8400CAB025 /* SignUpViewController.swift in Sources */,
+				0487CBB51EB08D9A00CAB025 /* VerificationViewController.swift in Sources */,
 				044027571E9D303900C5E030 /* BaseViewController.swift in Sources */,
 				0487CBAE1EAFBC3200CAB025 /* LogInViewController.swift in Sources */,
 				0499FAE31EA8B4740082ADB8 /* CustomCarCell.swift in Sources */,
@@ -443,6 +470,7 @@
 			baseConfigurationReference = 0FAD21F3A3FAAE01880536B0 /* Pods-shareiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = shareiOS/shareiOS.entitlements;
 				DEVELOPMENT_TEAM = VJGEDW5SA9;
 				INFOPLIST_FILE = shareiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -457,6 +485,7 @@
 			baseConfigurationReference = B943FCAFE3394A00B1AC83E0 /* Pods-shareiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = shareiOS/shareiOS.entitlements;
 				DEVELOPMENT_TEAM = VJGEDW5SA9;
 				INFOPLIST_FILE = shareiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

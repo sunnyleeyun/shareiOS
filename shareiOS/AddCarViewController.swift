@@ -27,7 +27,7 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // car text field
         var CarNumberTextField = UITextField(frame: CGRect(
             x: 0, y: 0,
-            width: fullScreenSize.width, height: 40))
+            width: fullScreenSize.width * 0.5, height: 40))
 
         CarNumberTextField.placeholder = "車牌號碼"
         CarNumberTextField.backgroundColor = UIColor.init(
@@ -35,14 +35,14 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         CarNumberTextField.textAlignment = .center
         CarNumberTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.55)
+            y: fullScreenSize.height * 0.5)
         self.view.addSubview(CarNumberTextField)
         
         
         // oil text field
         var OilTextField = UITextField(frame: CGRect(
             x: 0, y: 0,
-            width: fullScreenSize.width, height: 40))
+            width: fullScreenSize.width * 0.5, height: 40))
         OilTextField.placeholder = "加油種類"
         
         oilPickerView.delegate = self
@@ -58,14 +58,14 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         OilTextField.textAlignment = .center
         OilTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.65)
+            y: fullScreenSize.height * 0.6)
         self.view.addSubview(OilTextField)
 
         
         // car age text field
         var AgeTextField = UITextField(frame: CGRect(
             x: 0, y: 0,
-            width: fullScreenSize.width, height: 40))
+            width: fullScreenSize.width * 0.5, height: 40))
         AgeTextField.placeholder = "愛車年齡"
         
         agePickerView.delegate = self
@@ -80,7 +80,7 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         AgeTextField.textAlignment = .center
         AgeTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.75)
+            y: fullScreenSize.height * 0.7)
         self.view.addSubview(AgeTextField)
         
         
@@ -88,7 +88,7 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // car type text field
         var TypeTextField = UITextField(frame: CGRect(
             x: 0, y: 0,
-            width: fullScreenSize.width, height: 40))
+            width: fullScreenSize.width * 0.5, height: 40))
         TypeTextField.placeholder = "愛車種類"
         
         typePickerView.delegate = self
@@ -103,21 +103,21 @@ class AddCarViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         TypeTextField.textAlignment = .center
         TypeTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.85)
+            y: fullScreenSize.height * 0.8)
         self.view.addSubview(TypeTextField)
         
         
         // others
         var OthersTextField = UITextField(frame: CGRect(
             x: 0, y: 0,
-            width: fullScreenSize.width, height: 40))
+            width: fullScreenSize.width * 0.5, height: 40))
         OthersTextField.placeholder = "其他備註"
         OthersTextField.backgroundColor = UIColor.init(
             red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
         OthersTextField.textAlignment = .center
         OthersTextField.center = CGPoint(
             x: fullScreenSize.width * 0.5,
-            y: fullScreenSize.height * 0.95)
+            y: fullScreenSize.height * 0.9)
         self.view.addSubview(OthersTextField)
         
 
