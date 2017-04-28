@@ -37,39 +37,7 @@ class AddCarTwoViewController: UIViewController{
     }
     
     
-    func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
-        if let error = error {
-            print(error.localizedDescription)
-        }
-        
-        if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer,
-            let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
-            
-            let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: nil)
-            let dataProvider = CGDataProvider(data: imageData as! CFData)
-            
-            let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.absoluteColorimetric)
-            
-            
-            let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
-            
-            let cropedImage = self.cropToSquare(image: image)
-            
-            let newImage = self.scaleImageWith(cropedImage, and: CGSize(width: 600, height: 600))
-            
-            print(UIScreen.main.bounds.width)
-            
-            
-            self.tempImageView.image = newImage
-            self.tempImageView.isHidden = false
-            
-            
-        } else {
-            
-        }
-    }
-    
     
     
     

@@ -60,9 +60,17 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
             if error != nil{
                 print("Something went wrong with our fb user: ", error ?? "")
                 return
+                
             }
             
+            
+            let nextView = (self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewControllerID"))! as UIViewController
+            self.present(nextView, animated: true, completion: nil)
+            
             print("Successfully logged in with our user: ", error ?? "")
+            
+            
+            
         })
         
     }
