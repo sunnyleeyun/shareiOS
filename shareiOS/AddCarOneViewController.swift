@@ -10,6 +10,9 @@ import UIKit
 
 class AddCarOneViewController: UIViewController {
 
+    @IBOutlet weak var CarOrScooter: UISegmentedControl!
+    @IBOutlet weak var RentOrBuy: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +24,10 @@ class AddCarOneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func NextStep(_ sender: Any) {
+        
+    }
 
     /*
     // MARK: - Navigation
