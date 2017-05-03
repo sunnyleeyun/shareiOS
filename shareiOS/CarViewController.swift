@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CarViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 

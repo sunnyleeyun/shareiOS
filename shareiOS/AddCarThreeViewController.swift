@@ -241,69 +241,103 @@ class AddCarThreeViewController: UIViewController {
 
     @IBAction func Save(_ sender: Any) {
         
-        
-        if couSun % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Sunday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Sunday").setValue("OFF")
+        if StartTime.text != "" && EndTime.text != ""{
+            if couSun % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Sunday").setValue("ON")
+            }else if couSun == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Sunday").setValue("OFF")
 
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Sunday").setValue("OFF")
+                
+            }
+            
+            if couMon % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Monday").setValue("ON")
+            }else if couMon == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Monday").setValue("OFF")
+
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Monday").setValue("OFF")
+                
+            }
+            
+            if couTue % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Tuesday").setValue("ON")
+            }else if couTue == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Tuesday").setValue("OFF")
+
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Tuesday").setValue("OFF")
+            }
+            
+            
+            
+            if couWed % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Wednesday").setValue("ON")
+            }else if couWed == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Wednesday").setValue("OFF")
+
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Wednesday").setValue("OFF")
+            }
+            
+            
+            
+            if couThu % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Thursday").setValue("ON")
+            }else if couThu == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Thursday").setValue("OFF")
+
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Thursday").setValue("OFF")
+                
+
+            }
+            
+            
+            
+            if couFri % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Friday").setValue("ON")
+            }else if couFri == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Friday").setValue("OFF")
+
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Friday").setValue("OFF")
+                
+            }
+
+            
+            if couSat % 2 == 1{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Saturday").setValue("ON")
+            }else if couSat == 0{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Saturday").setValue("OFF")
+
+            }else{
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Day").child("Saturday").setValue("OFF")
+                
+            }
+
+            
+            
+            
+            placeString.text = "Taipei"
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Place").setValue(placeString.text!)
+
+            
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Start").setValue(StartTime.text!)
+
+            
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("End").setValue(EndTime.text!)
+
+            
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "CarViewControllerID")as! CarViewController
+            self.present(nextVC,animated:true,completion:nil)
+            
         }
-        
-        if couMon % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Monday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Monday").setValue("OFF")
-
-        }
-        
-        if couTue % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Tuesday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Tuesday").setValue("OFF")
-
-        }
-        
-        if couWed % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Wednesday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Wednesday").setValue("OFF")
-
-        }
-        
-        if couThu % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Thursday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Thursday").setValue("OFF")
-
-        }
-        
-        if couFri % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Friday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Friday").setValue("OFF")
-
-        }
-        
-        if couSat % 2 == 0{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Saturday").setValue("ON")
-        }else{
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Saturday").setValue("OFF")
-
-        }
-        
-        
-        
-        placeString.text = "Taipei"
-        FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child("Place").setValue(placeString.text!)
-
-        
-        
-        
-        
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "CarViewControllerID")as! CarViewController
-        self.present(nextVC,animated:true,completion:nil)
         
     }
     /*

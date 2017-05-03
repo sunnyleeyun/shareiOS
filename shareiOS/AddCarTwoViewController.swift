@@ -129,9 +129,14 @@ class AddCarTwoViewController: UIViewController{
                     break
                 }
                 
-                if let other = others.text{
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/other").setValue(other)
+                
+                if others.text != ""{
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/other").setValue(others.text)
+                }else{
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/other").setValue("無")
+
                 }
+                
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let nextVC = storyboard.instantiateViewController(withIdentifier: "AddCarThreeViewControllerID")as! AddCarThreeViewController
@@ -197,7 +202,7 @@ extension AddCarTwoViewController: UIImagePickerControllerDelegate, UINavigation
                             print("Photo Url: \(uploadImageUrl)")
                             
                             
-                            let databaseRef = FIRDatabase.database().reference(withPath: "Car/\(self.uid)/\(uniqueString)/CarFile/Photo")
+                            let databaseRef = FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Photo")
                             
                             databaseRef.setValue(uploadImageUrl, withCompletionBlock: { (error, dataRef) in
                                 

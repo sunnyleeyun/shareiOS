@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lV8-Am-uq8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qrI-TZ-avH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,6 +24,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="skh-y7-EbM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPM-00-haS">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="我要租車">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirm:" destination="NPt-fQ-YJ5" eventType="touchUpInside" id="7gg-sn-XnE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -77,12 +88,26 @@
                     <view key="view" contentMode="scaleToFill" id="aJg-N6-YpX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-rD-olG">
+                                <rect key="frame" x="144" y="255" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="0911-111-111"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請來電撥打" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOR-Nf-CEu">
+                                <rect key="frame" x="90" y="214" width="194" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWJ-WL-Vqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-27"/>
+            <point key="canvasLocation" x="2384.8000000000002" y="-27.436281859070466"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="YBo-X9-ZHD">
@@ -100,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qP1-z9-kF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2215" y="-27"/>
+            <point key="canvasLocation" x="3152.8000000000002" y="-27.436281859070466"/>
         </scene>
         <!--Add Car One View Controller-->
         <scene sceneID="lgX-vl-xZZ">
@@ -574,6 +599,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D74-pY-wNH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="我的車輛" id="kiv-pJ-QBL">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eL9-Gu-lqN"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -583,13 +617,16 @@
                             <constraint firstItem="cKX-5T-CSw" firstAttribute="leading" secondItem="6ZK-kk-YNH" secondAttribute="leading" id="sUb-75-LAj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kJj-Ir-mFv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FfB-4X-9QX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="CarTableView" destination="cKX-5T-CSw" id="qLM-vL-7Rg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndp-Wk-pZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13.6" y="-26.53673163418291"/>
+            <point key="canvasLocation" x="952.79999999999995" y="-26.53673163418291"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="pAK-58-kTr">
@@ -602,12 +639,21 @@
                     <view key="view" contentMode="scaleToFill" id="pSp-DS-wXT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您目前沒有收藏車輛" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-wf-io1">
+                                <rect key="frame" x="90" y="198" width="194" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yvt-6f-Vue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="-26"/>
+            <point key="canvasLocation" x="1655.2" y="-26.53673163418291"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="MYG-B3-MJ3">
@@ -694,7 +740,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3Ia-SF-Yq5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sOO-kn-yC4" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="MapNavigationViewControllerID" storyboardIdentifier="MapNavigationViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="sOO-kn-yC4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d3W-77-ujq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -984,24 +1030,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEo-eK-Sg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-994" y="691"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qcp-nK-eN2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sQd-NF-DOP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XPl-Sk-mHz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qrI-TZ-avH" kind="relationship" relationship="rootViewController" id="Kc9-Tm-qMq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G3Z-Yf-MNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1847.2" y="1420.8395802098951"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="geZ-C9-1yH">
