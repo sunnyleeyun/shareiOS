@@ -99,38 +99,49 @@ class AddCarTwoViewController: UIViewController{
     }
         
     @IBAction func NextStep(_ sender: Any) {
-        if let carNum = carNumber.text{
-            
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarNumber").setValue(carNum)
-            
-            
-            switch carYear.selectedSegmentIndex {
-            case 0:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("5年以下")
-            case 1:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("5-10年")
-            case 2:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("10年以上")
-            default:
-                break
+        if carNumber != nil{
+            if let carNum = carNumber.text{
+                
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarNumber").setValue(carNum)
+                
+                
+                switch carYear.selectedSegmentIndex {
+                case 0:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("5年以下")
+                case 1:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("5-10年")
+                case 2:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("10年以上")
+                default:
+                    break
+                }
+                
+                switch carOil.selectedSegmentIndex {
+                case 0:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("92油")
+                case 1:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("95油")
+                case 2:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("98油")
+                case 3:
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("柴油")
+                default:
+                    break
+                }
+                
+                if let other = others.text{
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/other").setValue(other)
+                }
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyboard.instantiateViewController(withIdentifier: "AddCarThreeViewControllerID")as! AddCarThreeViewController
+                self.present(nextVC,animated:true,completion:nil)
+
+                
+                
+                
+                
             }
-            
-            switch carOil.selectedSegmentIndex {
-            case 0:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("92油")
-            case 1:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("95油")
-            case 2:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("98油")
-            case 3:
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("柴油")
-            default:
-                break
-            }
-            
-            
-            
-            
         }
 
     }
