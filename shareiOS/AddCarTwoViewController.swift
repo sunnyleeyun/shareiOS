@@ -99,7 +99,8 @@ class AddCarTwoViewController: UIViewController{
     }
         
     @IBAction func NextStep(_ sender: Any) {
-        if carNumber != nil{
+        if carNumber.text != ""{
+            
             if let carNum = carNumber.text{
                 
                 FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarNumber").setValue(carNum)
@@ -138,9 +139,11 @@ class AddCarTwoViewController: UIViewController{
                 }
                 
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC = storyboard.instantiateViewController(withIdentifier: "AddCarThreeViewControllerID")as! AddCarThreeViewController
-                self.present(nextVC,animated:true,completion:nil)
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextVC = storyboard.instantiateViewController(withIdentifier: "AddCarThreeViewControllerID")as! AddCarThreeViewController
+//                self.present(nextVC,animated:true,completion:nil)
+                
+                //self.navigationController?.pushViewController(nextVC, animated: true)
 
                 
                 

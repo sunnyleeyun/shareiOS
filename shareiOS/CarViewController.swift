@@ -26,15 +26,40 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     let cellReuseIdentifier = "cell"
 
+    @IBAction func addCar(_ sender: Any) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         CarTableView.delegate = self
         CarTableView.dataSource = self
         
+        
+//
+//        let rightButtonItem = UIBarButtonItem.init(
+//            title: "新增",
+//            style: .done,
+//            target: self,
+//            action: #selector(didTapEditButton)
+//        )
+//        
+//        self.navigationItem.rightBarButtonItem = rightButtonItem
+        
         // Do any additional setup after loading the view.
     }
 
+    func didTapEditButton(sender: AnyObject) {
+        print("hjxdbsdhjbv")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "AddCarOneViewControllerID")as! AddCarOneViewController
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
