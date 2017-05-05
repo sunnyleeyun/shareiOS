@@ -38,18 +38,18 @@ class AddCarOneViewController: UIViewController {
         
         switch CarOrScooter.selectedSegmentIndex {
         case 0:
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOrScooter").setValue("機車")
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Type/CarOrScooter").setValue("機車")
         case 1:
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOrScooter").setValue("汽車")
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Type/CarOrScooter").setValue("汽車")
         default:
             break
         }
         
         switch RentOrBuy.selectedSegmentIndex {
         case 0:
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/RentOrBuy").setValue("租借")
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Type/RentOrBuy").setValue("租借")
         case 1:
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/RentOrBuy").setValue("買賣")
+            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Type/RentOrBuy").setValue("買賣")
         default:
             break
         }

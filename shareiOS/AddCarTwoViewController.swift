@@ -103,38 +103,38 @@ class AddCarTwoViewController: UIViewController{
             
             if let carNum = carNumber.text{
                 
-                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarNumber").setValue(carNum)
+                FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarNumber").setValue(carNum)
                 
                 
                 switch carYear.selectedSegmentIndex {
                 case 0:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("5年以下")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarYear").setValue("5年以下")
                 case 1:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("5-10年")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarYear").setValue("5-10年")
                 case 2:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarYear").setValue("10年以上")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarYear").setValue("10年以上")
                 default:
                     break
                 }
                 
                 switch carOil.selectedSegmentIndex {
                 case 0:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("92油")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("92油")
                 case 1:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("95油")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("95油")
                 case 2:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("98油")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("98油")
                 case 3:
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/CarOil").setValue("柴油")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("柴油")
                 default:
                     break
                 }
                 
                 
                 if others.text != ""{
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/other").setValue(others.text)
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/other").setValue(others.text)
                 }else{
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/other").setValue("無")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/other").setValue("無")
 
                 }
                 
@@ -205,7 +205,7 @@ extension AddCarTwoViewController: UIImagePickerControllerDelegate, UINavigation
                             print("Photo Url: \(uploadImageUrl)")
                             
                             
-                            let databaseRef = FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Photo")
+                            let databaseRef = FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/Photo")
                             
                             databaseRef.setValue(uploadImageUrl, withCompletionBlock: { (error, dataRef) in
                                 

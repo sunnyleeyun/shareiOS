@@ -8,21 +8,28 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 
 class CarViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var CarTableView: UITableView!
+    
+    
+    var databaseRef: FIRDatabaseReference!
+    var storageRef: FIRStorageReference!
+
+    var refHandle: UInt!
+    var carList = [Cars]()
     
     var imageCar = ["cucu","cucu"]
     
     var numberCar = ["981-JOS","jd1-P13"]
     var typeOil = ["92","95"]
     var yearCar = ["5年以下","5-10年"]
-    var typeCar = ["塑膠車","擋車"]
     
-    
-    var Array: [String?] = []
-    
+    var uid = ""
+
     
     let cellReuseIdentifier = "cell"
 
@@ -36,6 +43,16 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         CarTableView.dataSource = self
         
         
+        if let user = FIRAuth.auth()?.currentUser {
+            uid = user.uid
+        }
+
+        
+        databaseRef = FIRDatabase.database().reference()
+        storageRef = FIRStorage.storage().reference()
+
+        fetchCarlist()
+        
 //
 //        let rightButtonItem = UIBarButtonItem.init(
 //            title: "新增",
@@ -45,6 +62,13 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
 //        )
 //        
 //        self.navigationItem.rightBarButtonItem = rightButtonItem
+        
+        
+        
+        
+        
+        
+        
         
         // Do any additional setup after loading the view.
     }
@@ -60,13 +84,42 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
     }
     
+    func fetchCarlist(){
+        refHandle = databaseRef.child("Car").observe(.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject]{
+                
+                print("dictionary is \(dictionary)")
+                
+                let carDetail = Cars()
+                
+                carDetail.setValuesForKeys(dictionary)
+                self.carList.append(carDetail)
+                
+//                let url2 = NSURL(string: url)  //postPhoto URL
+//                let data = NSData(contentsOfURL: url2!) // this URL convert into Data
+//                if data != nil {  //Some time Data value will be nil so we need to validate such things
+//                    myPost.postPhoto = UIImage(data: data!)
+//                }
+
+
+                DispatchQueue.main.async {
+                    self.CarTableView.reloadData()
+                }
+                
+                
+            }
+            
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberCar.count
+        return carList.count
+        //return numberCar.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,17 +130,17 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCarCell
         
         
+        //cell.carImage.image = UIImage(named: carList[indexPath.row].carImage)
+        //cell.carImage.image = UIImage(named: imageCar[indexPath.row])
         
-        cell.carImage.image = UIImage(named: imageCar[indexPath.row])
+        cell.carNumber.text = carList[indexPath.row].carNumber
+        //cell.carNumber.text = self.numberCar[indexPath.row]
         
-        cell.carNumber.text = self.numberCar[indexPath.row]
+        cell.oilType.text = carList[indexPath.row].carOil
+        //cell.oilType.text = self.typeOil[indexPath.row]
         
-        cell.oilType.text = self.typeOil[indexPath.row]
-        
-        cell.carYear.text = self.yearCar[indexPath.row]
-        
-        cell.carType.text = self.typeCar[indexPath.row]
-
+        cell.carYear.text = carList[indexPath.row].carYear
+        //cell.carYear.text = self.yearCar[indexPath.row]
         
         return cell
     }

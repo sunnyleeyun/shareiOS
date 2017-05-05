@@ -12,7 +12,7 @@ import Foundation
 class CustomCarCell: UITableViewCell {
 
     
-    @IBOutlet weak var carImage: UIImageView!
+    //@IBOutlet weak var carImage: UIImageView!
     
     @IBOutlet weak var carNumber: UILabel!
     
@@ -20,6 +20,5 @@ class CustomCarCell: UITableViewCell {
     
     @IBOutlet weak var carYear: UILabel!
     
-    @IBOutlet weak var carType: UILabel!
     
 }
