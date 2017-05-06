@@ -12,13 +12,14 @@ import Foundation
 class CustomCarCell: UITableViewCell {
 
     
-    //@IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var carImage: UIImageView!
     
     @IBOutlet weak var carNumber: UILabel!
     
-   // @IBOutlet weak var oilType: UILabel!
+    @IBOutlet weak var carOil: UILabel!
     
-    //@IBOutlet weak var carYear: UILabel!
+    @IBOutlet weak var carYear: UILabel!
+    
     
     
 }

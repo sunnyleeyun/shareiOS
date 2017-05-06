@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qrI-TZ-avH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H7E-f7-cnn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -123,16 +123,25 @@
                                                 <rect key="frame" x="97" y="50" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="Under5:" destination="H7E-f7-cnn" eventType="touchUpInside" id="KF5-eV-5LA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWM-15-bXT">
                                                 <rect key="frame" x="97" y="81" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="Bet5n10:" destination="H7E-f7-cnn" eventType="touchUpInside" id="cqa-RS-VVe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-rS-XIk">
                                                 <rect key="frame" x="97" y="111" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="Above10:" destination="H7E-f7-cnn" eventType="touchUpInside" id="qrC-2F-QJL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,21 +189,33 @@
                                                 <rect key="frame" x="48" y="58" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="box50:" destination="H7E-f7-cnn" eventType="touchUpInside" id="x00-bB-c0s"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzE-FG-Hc3">
                                                 <rect key="frame" x="48" y="102" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="box100:" destination="H7E-f7-cnn" eventType="touchUpInside" id="I0x-Ee-5jU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljT-t8-9JA">
                                                 <rect key="frame" x="162" y="58" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="box125:" destination="H7E-f7-cnn" eventType="touchUpInside" id="834-AB-UsR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJO-qO-jt2">
                                                 <rect key="frame" x="162" y="101" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="checkno"/>
+                                                <connections>
+                                                    <action selector="box150:" destination="H7E-f7-cnn" eventType="touchUpInside" id="dbL-7S-PLb"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="可接受 CC 數" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4F-b9-fGD">
                                                 <rect key="frame" x="96" y="14" width="102" height="21"/>
@@ -209,17 +230,6 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2Z-h9-mUz">
-                                <rect key="frame" x="33" y="622" width="308" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="我要租車">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirm:" destination="NPt-fQ-YJ5" eventType="touchUpInside" id="btR-pd-W1h"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rK1-FK-0ke">
                                 <rect key="frame" x="33" y="83" width="310" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -236,6 +246,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="Sun:" destination="lV8-Am-uq8" eventType="touchUpInside" id="8RG-ha-08C"/>
+                                                    <action selector="Sun:" destination="H7E-f7-cnn" eventType="touchUpInside" id="Vwu-4p-FK1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD0-EL-ePd">
@@ -246,6 +257,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="Mon:" destination="lV8-Am-uq8" eventType="touchUpInside" id="fAT-JJ-pIX"/>
+                                                    <action selector="Mon:" destination="H7E-f7-cnn" eventType="touchUpInside" id="iap-m1-ySq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i42-p9-dlh">
@@ -255,6 +267,7 @@
                                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="Tue:" destination="H7E-f7-cnn" eventType="touchUpInside" id="h14-aQ-7s2"/>
                                                     <action selector="Tues:" destination="lV8-Am-uq8" eventType="touchUpInside" id="ZwQ-3M-ajS"/>
                                                 </connections>
                                             </button>
@@ -265,6 +278,7 @@
                                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="Wed:" destination="H7E-f7-cnn" eventType="touchUpInside" id="CtN-we-aD8"/>
                                                     <action selector="Wed:" destination="lV8-Am-uq8" eventType="touchUpInside" id="HXz-gf-ti4"/>
                                                 </connections>
                                             </button>
@@ -275,6 +289,7 @@
                                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="Thu:" destination="H7E-f7-cnn" eventType="touchUpInside" id="zZh-qa-HVA"/>
                                                     <action selector="Thurs:" destination="lV8-Am-uq8" eventType="touchUpInside" id="Aeq-b2-0bi"/>
                                                 </connections>
                                             </button>
@@ -286,6 +301,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="Fri:" destination="lV8-Am-uq8" eventType="touchUpInside" id="384-eJ-PL2"/>
+                                                    <action selector="Fri:" destination="H7E-f7-cnn" eventType="touchUpInside" id="8rQ-9H-J3V"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-1u-rGC">
@@ -296,6 +312,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="Sat:" destination="lV8-Am-uq8" eventType="touchUpInside" id="Sdb-ok-zDU"/>
+                                                    <action selector="Sat:" destination="H7E-f7-cnn" eventType="touchUpInside" id="os5-lI-hhQ"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="起始時間" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORk-ZM-wtA">
@@ -332,9 +349,45 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-u0-ucD">
+                                <rect key="frame" x="0.0" y="619" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2Z-h9-mUz">
+                                        <rect key="frame" x="8" y="5" width="359" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="我要租車">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirm:" destination="NPt-fQ-YJ5" eventType="touchUpInside" id="btR-pd-W1h"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="WPk-WY-cyN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Below5" destination="V4q-JR-Q2s" id="Jsz-Om-LqQ"/>
+                        <outlet property="Bet5To10" destination="NWM-15-bXT" id="1Cm-AH-hms"/>
+                        <outlet property="Check100" destination="EzE-FG-Hc3" id="kjw-DC-h1g"/>
+                        <outlet property="Check125" destination="ljT-t8-9JA" id="TVh-sz-v7B"/>
+                        <outlet property="Check150" destination="ZJO-qO-jt2" id="8Su-Di-vAJ"/>
+                        <outlet property="Check50" destination="H4s-Z1-PS0" id="x6K-Pw-cZI"/>
+                        <outlet property="EndTime" destination="qFi-NM-YKp" id="mMO-so-3sT"/>
+                        <outlet property="Friday" destination="sa6-jS-DYz" id="cH2-HL-xm8"/>
+                        <outlet property="Monday" destination="ZD0-EL-ePd" id="B3A-Y3-Mdz"/>
+                        <outlet property="MoreThan10" destination="dqj-rS-XIk" id="1w1-SA-S54"/>
+                        <outlet property="Saturday" destination="KzT-1u-rGC" id="DWh-vM-RJc"/>
+                        <outlet property="StartTime" destination="ORk-ZM-wtA" id="kRc-kx-XpH"/>
+                        <outlet property="Sunday" destination="iBE-IC-Wuy" id="drm-j6-RFI"/>
+                        <outlet property="Thursday" destination="38Q-Lu-pdB" id="pVt-Wl-3ip"/>
+                        <outlet property="Tuesday" destination="i42-p9-dlh" id="NMh-02-eKu"/>
+                        <outlet property="Wednesday" destination="30Q-hS-qv0" id="IQf-EW-mTY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObE-Af-JcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,18 +430,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-rD-olG">
-                                <rect key="frame" x="144" y="255" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="0911-111-111"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請來電撥打" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOR-Nf-CEu">
-                                <rect key="frame" x="90" y="214" width="194" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="歡迎來電！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOR-Nf-CEu">
+                                <rect key="frame" x="120" y="281" width="149" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="若有任何問題，" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSO-Wi-PqU">
+                                <rect key="frame" x="125" y="249" width="143" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-rD-olG">
+                                <rect key="frame" x="125" y="318" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="0911-111-111"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -789,11 +850,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="選擇地點" id="eiP-6w-y2D">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BhW-HE-2FT">
-                            <connections>
-                                <segue destination="lV8-Am-uq8" kind="show" id="ou6-MW-q0C"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BhW-HE-2FT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="HsZ-i9-gJu">
                             <connections>
                                 <action selector="showSearchBar:" destination="NPt-fQ-YJ5" id="XT9-K3-Ma1"/>
@@ -807,7 +864,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MP3-Fg-Dhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="sAy-6w-cAQ">
                     <connections>
-                        <action selector="longPressAction:" destination="NPt-fQ-YJ5" id="es9-6F-qoZ"/>
+                        <action selector="longPressActionWithSender:" destination="NPt-fQ-YJ5" id="ces-r7-D4F"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
@@ -892,7 +949,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="carImage" destination="sff-6g-aXO" id="4n7-Gy-P3D"/>
                                             <outlet property="carNumber" destination="gMD-sY-Ady" id="6tO-qv-jxB"/>
+                                            <outlet property="carOil" destination="Bt9-ik-kRG" id="cbr-sr-Uw9"/>
+                                            <outlet property="carYear" destination="3zr-tG-yOz" id="Je4-iQ-ege"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1519,6 +1579,6 @@
         <segue reference="MoE-IQ-Ih9"/>
         <segue reference="kEh-X1-XDQ"/>
         <segue reference="nJV-FU-52f"/>
-        <segue reference="jDd-Fj-1Nk"/>
+        <segue reference="WPk-WY-cyN"/>
     </inferredMetricsTieBreakers>
 </document>

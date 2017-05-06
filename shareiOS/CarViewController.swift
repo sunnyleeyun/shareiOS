@@ -70,7 +70,9 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         
         
-        // Do any additional setup after loading the view.
+
+    
+    
     }
 
     func didTapEditButton(sender: AnyObject) {
@@ -86,33 +88,18 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func fetchCarlist(){
        
-//        databaseRef.queryOrdered(byChild: "Cars").observe(.childAdded, with: {
-//            (snapshot) in
-//            
-//            
-//            if let dictionary = snapshot.value as? [String:AnyObject]{
-//                
-//                
-//                let carDetail = Cars()
-//                
-//                carDetail.setValuesForKeys(dictionary)
-//                
-//                self.carList.append(carDetail)
-//                DispatchQueue.main.async(execute: {
-//                    self.CarTableView.reloadData()
-//                })
-//                
-//                
-//            }
-//        })
         
-        refHandle = databaseRef.child("Car/\(self.uid)/CarNumber").observe(.childAdded, with: { (snapshot) in
+        
+        refHandle = databaseRef.child("Cars/\(self.uid)").observe(.childAdded, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String : AnyObject]{
                 
                 print("dictionary is \(dictionary)")
                 
                 let carDetail = Cars()
+                
+                
+
                 
                 carDetail.setValuesForKeys(dictionary)
                 self.carList.append(carDetail)
@@ -148,20 +135,20 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCarCell
         
         
-        //cell.carImage.image = UIImage(named: carList[indexPath.row].carImage)
+        //cell.carImage.image = carList[indexPath.row].CarImage
         //cell.carImage.image = UIImage(named: imageCar[indexPath.row])
+        cell.carImage.image = UIImage(named: "cucu")
         
         cell.carNumber.text = carList[indexPath.row].CarNumber
         //cell.carNumber.text = self.numberCar[indexPath.row]
         
         
-        //cell.oilType.text = carList[indexPath.row].carOil
+        cell.carOil.text = carList[indexPath.row].CarOil
         
         //cell.oilType.text = self.typeOil[indexPath.row]
         
         
-        //cell.carYear.text = carList[indexPath.row].carYear
-        
+        cell.carYear.text = carList[indexPath.row].CarYear
         //cell.carYear.text = self.yearCar[indexPath.row]
         
         return cell
