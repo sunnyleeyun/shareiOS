@@ -13,9 +13,9 @@ class Cars: NSObject{
 
     
     //var carImage: UIImage?
-    var carNumber: String?
-    var carOil: String?
-    var carYear: String?
+    var CarNumber: String?
+    //var carOil: String?
+    //var carYear: String?
 
     
 }

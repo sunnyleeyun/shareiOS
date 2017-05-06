@@ -16,9 +16,9 @@ class CustomCarCell: UITableViewCell {
     
     @IBOutlet weak var carNumber: UILabel!
     
-    @IBOutlet weak var oilType: UILabel!
+   // @IBOutlet weak var oilType: UILabel!
     
-    @IBOutlet weak var carYear: UILabel!
+    //@IBOutlet weak var carYear: UILabel!
     
     
 }

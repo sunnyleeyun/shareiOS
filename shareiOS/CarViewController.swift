@@ -85,7 +85,29 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func fetchCarlist(){
-        refHandle = databaseRef.child("Car").observe(.childAdded, with: { (snapshot) in
+       
+//        databaseRef.queryOrdered(byChild: "Cars").observe(.childAdded, with: {
+//            (snapshot) in
+//            
+//            
+//            if let dictionary = snapshot.value as? [String:AnyObject]{
+//                
+//                
+//                let carDetail = Cars()
+//                
+//                carDetail.setValuesForKeys(dictionary)
+//                
+//                self.carList.append(carDetail)
+//                DispatchQueue.main.async(execute: {
+//                    self.CarTableView.reloadData()
+//                })
+//                
+//                
+//            }
+//        })
+        
+        refHandle = databaseRef.child("Car/\(self.uid)/CarNumber").observe(.childAdded, with: { (snapshot) in
+            
             if let dictionary = snapshot.value as? [String : AnyObject]{
                 
                 print("dictionary is \(dictionary)")
@@ -95,13 +117,7 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 carDetail.setValuesForKeys(dictionary)
                 self.carList.append(carDetail)
                 
-//                let url2 = NSURL(string: url)  //postPhoto URL
-//                let data = NSData(contentsOfURL: url2!) // this URL convert into Data
-//                if data != nil {  //Some time Data value will be nil so we need to validate such things
-//                    myPost.postPhoto = UIImage(data: data!)
-//                }
-
-
+                
                 DispatchQueue.main.async {
                     self.CarTableView.reloadData()
                 }
@@ -110,6 +126,8 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
             }
             
         })
+//
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,13 +151,17 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //cell.carImage.image = UIImage(named: carList[indexPath.row].carImage)
         //cell.carImage.image = UIImage(named: imageCar[indexPath.row])
         
-        cell.carNumber.text = carList[indexPath.row].carNumber
+        cell.carNumber.text = carList[indexPath.row].CarNumber
         //cell.carNumber.text = self.numberCar[indexPath.row]
         
-        cell.oilType.text = carList[indexPath.row].carOil
+        
+        //cell.oilType.text = carList[indexPath.row].carOil
+        
         //cell.oilType.text = self.typeOil[indexPath.row]
         
-        cell.carYear.text = carList[indexPath.row].carYear
+        
+        //cell.carYear.text = carList[indexPath.row].carYear
+        
         //cell.carYear.text = self.yearCar[indexPath.row]
         
         return cell
