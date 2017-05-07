@@ -57,7 +57,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         case 5:
             print("Setting\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("SettingViewControllerID")
+            self.openViewControllerBasedOnIdentifier("SignUpViewControllerID")
             
             break
 

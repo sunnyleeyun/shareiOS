@@ -11,7 +11,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     
     var uid = ""
@@ -32,12 +32,22 @@ class SignUpViewController: UIViewController {
             uid = user.uid
         }
         
+        self.Name.delegate = self
+        self.NickName.delegate = self
+        self.Gender.delegate = self
+        self.Phone.delegate = self
+
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     @IBAction func Next_Step(_ sender: Any) {

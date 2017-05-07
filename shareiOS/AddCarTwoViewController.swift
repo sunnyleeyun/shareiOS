@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class AddCarTwoViewController: UIViewController{
+class AddCarTwoViewController: UIViewController, UITextFieldDelegate{
 
     
     @IBOutlet weak var carNumber: UITextField!
@@ -25,6 +25,10 @@ class AddCarTwoViewController: UIViewController{
     var uid = ""
     
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +39,8 @@ class AddCarTwoViewController: UIViewController{
             uid = user.uid
         }
         
+        self.carNumber.delegate = self
+        self.others.delegate = self;
 
 
     }
@@ -103,29 +109,64 @@ class AddCarTwoViewController: UIViewController{
             
             if let carNum = carNumber.text{
                 
+                
+                let uniqueString = NSUUID().uuidString
+                print("UniqueString is \(uniqueString)")
+                
+                
+                
                 FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarNumber").setValue(carNum)
+                
+                FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarNumber").setValue(carNum)
+
                 
                 
                 switch carYear.selectedSegmentIndex {
                 case 0:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarYear").setValue("5年以下")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarYear").setValue("5年以下")
+
+                    
                 case 1:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarYear").setValue("5-10年")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarYear").setValue("5-10年")
+
                 case 2:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarYear").setValue("10年以上")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarYear").setValue("10年以上")
+
                 default:
                     break
                 }
                 
+                
                 switch carOil.selectedSegmentIndex {
                 case 0:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("92油")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarOil").setValue("92油")
+
                 case 1:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("95油")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarOil").setValue("95油")
+
+                    
                 case 2:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("98油")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarOil").setValue("98油")
+
+                    
                 case 3:
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/CarOil").setValue("柴油")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarOil").setValue("柴油")
+
+                    
                 default:
                     break
                 }

@@ -21,6 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         FIRApp.configure()
+        
+        /*
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            defaults.synchronize()
+            let storyboard = UIStoryboard(name: "main", bundle: nil) //Write your storyboard name
+            let viewController = storyboard.instantiateViewController(withIdentifier: "LogInViewControllerID") as! LogInViewController
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
+        */
+        
 
         return true
     }

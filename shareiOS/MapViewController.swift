@@ -29,6 +29,8 @@ class MapViewController: BaseViewController, UISearchBarDelegate, MKMapViewDeleg
     
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

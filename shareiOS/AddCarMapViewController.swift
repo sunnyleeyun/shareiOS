@@ -9,6 +9,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class AddCarMapViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -24,9 +27,20 @@ class AddCarMapViewController: UIViewController, UISearchBarDelegate, MKMapViewD
     
     var locationManager: CLLocationManager!
     
+    let locationsRef = FIRDatabase.database().reference(withPath: "Locations")
+
+    
+    var uid = ""
+    
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        
+        if let user = FIRAuth.auth()?.currentUser {
+            uid = user.uid
+        }
 
         
         locationManager = CLLocationManager()
@@ -119,6 +133,9 @@ class AddCarMapViewController: UIViewController, UISearchBarDelegate, MKMapViewD
         }
     }
     
+    
+
+    
     @IBAction func longPressAction(sender: UILongPressGestureRecognizer) {
         
         
@@ -126,7 +143,23 @@ class AddCarMapViewController: UIViewController, UISearchBarDelegate, MKMapViewD
         let coordinate = mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
+        
+        print("插針位置 \(annotation.coordinate.latitude)")
+        print("插針位置 \(annotation.coordinate.longitude)")
+        
+        
+        FIRDatabase.database().reference(withPath: "Location/\(self.uid)").child("Latitude").setValue(annotation.coordinate.latitude)
+
+        FIRDatabase.database().reference(withPath: "Location/\(self.uid)").child("Longitude").setValue(annotation.coordinate.longitude)
+
+        
+        
         mapView.addAnnotation(annotation)
+        
+        
+
+        
+        
         
     }
     

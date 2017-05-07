@@ -64,7 +64,7 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
             
             
-            let nextView = (self.storyboard?.instantiateViewController(withIdentifier: "MapNavigationViewControllerID"))! as UIViewController
+            let nextView = (self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewControllerID"))! as UIViewController
             self.present(nextView, animated: true, completion: nil)
             
             print("Successfully logged in with our user: ", error ?? "")

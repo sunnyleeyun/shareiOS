@@ -37,7 +37,7 @@ class VerificationViewController: UIViewController {
         
         //跳回登入頁
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "AddCarOneViewController")as! AddCarOneViewController
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "MapNavigationViewControllerID")as! UIViewController
         self.present(nextVC,animated:true,completion:nil)
     }
 

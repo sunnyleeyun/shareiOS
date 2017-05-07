@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class RentViewController: UIViewController {
+class RentViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var Sunday: UIButton!
@@ -61,6 +61,13 @@ class RentViewController: UIViewController {
     var boxBet5To10 = 0
     var boxMoreThan10 = 0
     
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,12 +76,17 @@ class RentViewController: UIViewController {
         if let user = FIRAuth.auth()?.currentUser {
             uid = user.uid
         }
+        
+        self.StartTime.delegate = self
+        self.EndTime.delegate = self
 
         
         
     
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 
-class AddCarThreeViewController: UIViewController {
+class AddCarThreeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var Sunday: UIButton!
     @IBOutlet weak var Monday: UIButton!
@@ -26,6 +26,7 @@ class AddCarThreeViewController: UIViewController {
     @IBOutlet weak var StartTime: UITextField!
     @IBOutlet weak var EndTime: UITextField!
     
+    var placeString = ""
     
     
     var uid = ""
@@ -41,8 +42,10 @@ class AddCarThreeViewController: UIViewController {
     var couSat = 0
 
     
-    @IBOutlet weak var placeString: UILabel!
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +56,9 @@ class AddCarThreeViewController: UIViewController {
             uid = user.uid
         }
         
-    
+        self.StartTime.delegate = self;
+        self.EndTime.delegate = self;
+
     
     }
 
@@ -321,15 +326,16 @@ class AddCarThreeViewController: UIViewController {
             
             
             
-            placeString.text = "Taipei"
-            FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Time").child("Place").setValue(placeString.text!)
+            //placeString = "Taipei"
+            
+            //FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Time").child("Place").setValue(placeString)
 
             
             FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Time").child("Start").setValue(StartTime.text!)
 
             
             FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Time").child("End").setValue(EndTime.text!)
-
+            
             
             
             
