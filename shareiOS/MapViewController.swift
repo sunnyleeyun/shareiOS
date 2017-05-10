@@ -9,6 +9,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class MapViewController: BaseViewController, UISearchBarDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -26,6 +29,7 @@ class MapViewController: BaseViewController, UISearchBarDelegate, MKMapViewDeleg
     
     var locationManager: CLLocationManager!
 
+    var uid = ""
     
     
     @IBOutlet weak var mapView: MKMapView!
@@ -36,7 +40,10 @@ class MapViewController: BaseViewController, UISearchBarDelegate, MKMapViewDeleg
 
         self.addSlideMenuButton()
         
-        
+        if let user = FIRAuth.auth()?.currentUser {
+            uid = user.uid
+        }
+
         
         
         
@@ -66,6 +73,14 @@ class MapViewController: BaseViewController, UISearchBarDelegate, MKMapViewDeleg
         locationManager.startUpdatingLocation()
         
         mapView.userTrackingMode = .followWithHeading
+        
+        
+        FIRDatabase.database().reference().child("Location/\(self.uid)").observe(.childAdded, with: { (snapshot) -> Void in
+            //let lat = snapshot.value!["lat"] as! Double
+            //let long = snapshot.value!["long"] as! Double
+            
+            
+        })
         
         
         let annotation = MKPointAnnotation()

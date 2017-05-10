@@ -147,10 +147,12 @@ class AddCarMapViewController: UIViewController, UISearchBarDelegate, MKMapViewD
         print("插針位置 \(annotation.coordinate.latitude)")
         print("插針位置 \(annotation.coordinate.longitude)")
         
-        
-        FIRDatabase.database().reference(withPath: "Location/\(self.uid)").child("Latitude").setValue(annotation.coordinate.latitude)
+        let uniqueString = NSUUID().uuidString
 
-        FIRDatabase.database().reference(withPath: "Location/\(self.uid)").child("Longitude").setValue(annotation.coordinate.longitude)
+        
+        FIRDatabase.database().reference(withPath: "Location/\(self.uid)").child(uniqueString).child("Latitude").setValue(annotation.coordinate.latitude)
+
+        FIRDatabase.database().reference(withPath: "Location/\(self.uid)").child(uniqueString).child("Longitude").setValue(annotation.coordinate.longitude)
 
         
         
