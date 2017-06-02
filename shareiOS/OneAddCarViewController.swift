@@ -197,7 +197,7 @@ class OneAddCarViewController: UIViewController {
 
 
 
-extension AddCarTwoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension OneAddCarViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
