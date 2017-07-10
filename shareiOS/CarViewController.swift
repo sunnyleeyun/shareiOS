@@ -134,22 +134,28 @@ class CarViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCarCell
         
-        
-        //cell.carImage.image = carList[indexPath.row].CarImage
-        //cell.carImage.image = UIImage(named: imageCar[indexPath.row])
-        cell.carImage.image = UIImage(named: "cucu")
+        if let profileImageUrl = carList[indexPath.row].CarImage{
+            let url = URL(string: profileImageUrl)
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                if error != nil{
+                    print(error)
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    cell.carImage.image = UIImage(data: data!)
+                }
+                
+            }).resume()
+        }
+
         
         cell.carNumber.text = carList[indexPath.row].CarNumber
-        //cell.carNumber.text = self.numberCar[indexPath.row]
-        
         
         cell.carOil.text = carList[indexPath.row].CarOil
-        
-        //cell.oilType.text = self.typeOil[indexPath.row]
-        
-        
         cell.carYear.text = carList[indexPath.row].CarYear
-        //cell.carYear.text = self.yearCar[indexPath.row]
+        
+        cell.carMore.text = carList[indexPath.row].CarMore
         
         return cell
     }

@@ -161,8 +161,14 @@ class OneAddCarViewController: UIViewController {
                 
                 if others.text != ""{
                     FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child(uniqueString).child("Other").setValue(others.text)
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarMore").setValue(others.text)
+
                 }else{
-                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child(uniqueString).child("Other").setValue("無")
+                    FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile").child(uniqueString).child("Other").setValue("無備註")
+                    
+                    FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(uniqueString).child("CarMore").setValue("無備註")
+
                     
                 }
                 

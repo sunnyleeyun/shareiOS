@@ -20,6 +20,6 @@ class CustomCarCell: UITableViewCell {
     
     @IBOutlet weak var carYear: UILabel!
     
-    
+    @IBOutlet weak var carMore: UILabel!
     
 }

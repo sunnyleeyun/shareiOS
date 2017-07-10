@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0430E89C1F127D8F00A4056F /* RentPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430E89B1F127D8F00A4056F /* RentPlaceViewController.swift */; };
+		0430E89E1F12843500A4056F /* RentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430E89D1F12843400A4056F /* RentDetailViewController.swift */; };
+		0430E8A01F132C3500A4056F /* MainSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430E89F1F132C3500A4056F /* MainSettingViewController.swift */; };
+		0430E8A21F132C5200A4056F /* MainSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430E8A11F132C5200A4056F /* MainSettingTableViewCell.swift */; };
 		043816C41EA0ED760002E22C /* PurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043816C31EA0ED760002E22C /* PurseViewController.swift */; };
 		044027441E9D2DB900C5E030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027431E9D2DB900C5E030 /* AppDelegate.swift */; };
 		044027461E9D2DB900C5E030 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044027451E9D2DB900C5E030 /* MapViewController.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0430E89B1F127D8F00A4056F /* RentPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentPlaceViewController.swift; sourceTree = "<group>"; };
+		0430E89D1F12843400A4056F /* RentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentDetailViewController.swift; sourceTree = "<group>"; };
+		0430E89F1F132C3500A4056F /* MainSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSettingViewController.swift; sourceTree = "<group>"; };
+		0430E8A11F132C5200A4056F /* MainSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSettingTableViewCell.swift; sourceTree = "<group>"; };
 		043816C31EA0ED760002E22C /* PurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurseViewController.swift; sourceTree = "<group>"; };
 		044027401E9D2DB900C5E030 /* shareiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044027431E9D2DB900C5E030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +143,8 @@
 				044027561E9D303900C5E030 /* MenuViewController.swift */,
 				044027551E9D303900C5E030 /* BaseViewController.swift */,
 				044027451E9D2DB900C5E030 /* MapViewController.swift */,
+				0430E89B1F127D8F00A4056F /* RentPlaceViewController.swift */,
+				0430E89D1F12843400A4056F /* RentDetailViewController.swift */,
 				04E13DC21EBB81F5000F54AA /* RentViewController.swift */,
 			);
 			name = Map;
@@ -163,11 +173,11 @@
 				04E13DC41EBB8B59000F54AA /* Cars.swift */,
 				0499FAE21EA8B4740082ADB8 /* CustomCarCell.swift */,
 				0499FAE41EA8BA4F0082ADB8 /* CarViewController.swift */,
+				04B013E01EC2CAF000B50ECE /* OneAddCarViewController.swift */,
+				0495434D1EB8DA070052B36F /* AddCarMapViewController.swift */,
 				0487CBB71EB1C1DB00CAB025 /* AddCarOneViewController.swift */,
 				04B2EC2C1EAC7E1B00068A4B /* AddCarTwoViewController.swift */,
 				0487CBB91EB1C21100CAB025 /* AddCarThreeViewController.swift */,
-				04B013E01EC2CAF000B50ECE /* OneAddCarViewController.swift */,
-				0495434D1EB8DA070052B36F /* AddCarMapViewController.swift */,
 			);
 			name = Car;
 			sourceTree = "<group>";
@@ -175,6 +185,8 @@
 		0487CBA61EAFBB5900CAB025 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				0430E89F1F132C3500A4056F /* MainSettingViewController.swift */,
+				0430E8A11F132C5200A4056F /* MainSettingTableViewCell.swift */,
 				04A2C8751EA7B4AA00BD7E3A /* SettingViewController.swift */,
 			);
 			name = Setting;
@@ -355,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0430E8A01F132C3500A4056F /* MainSettingViewController.swift in Sources */,
 				0487CBAB1EAFBB9000CAB025 /* CollectionViewController.swift in Sources */,
 				044027461E9D2DB900C5E030 /* MapViewController.swift in Sources */,
 				044027441E9D2DB900C5E030 /* AppDelegate.swift in Sources */,
@@ -369,11 +382,14 @@
 				0499FAE51EA8BA4F0082ADB8 /* CarViewController.swift in Sources */,
 				0487CBB81EB1C1DB00CAB025 /* AddCarOneViewController.swift in Sources */,
 				0487CBB31EB08D8400CAB025 /* SignUpViewController.swift in Sources */,
+				0430E8A21F132C5200A4056F /* MainSettingTableViewCell.swift in Sources */,
 				04E13DC51EBB8B59000F54AA /* Cars.swift in Sources */,
 				0487CBB51EB08D9A00CAB025 /* VerificationViewController.swift in Sources */,
 				044027571E9D303900C5E030 /* BaseViewController.swift in Sources */,
 				0495434E1EB8DA070052B36F /* AddCarMapViewController.swift in Sources */,
+				0430E89C1F127D8F00A4056F /* RentPlaceViewController.swift in Sources */,
 				0487CBAE1EAFBC3200CAB025 /* LogInViewController.swift in Sources */,
+				0430E89E1F12843500A4056F /* RentDetailViewController.swift in Sources */,
 				0499FAE31EA8B4740082ADB8 /* CustomCarCell.swift in Sources */,
 				0440275A1E9DCFD900C5E030 /* ListViewController.swift in Sources */,
 				044027581E9D303900C5E030 /* MenuViewController.swift in Sources */,
