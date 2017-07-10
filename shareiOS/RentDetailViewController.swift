@@ -8,15 +8,26 @@
 
 import UIKit
 
-class RentDetailViewController: UIViewController {
+class RentDetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var CarOrScooter: UISegmentedControl!
     
     @IBOutlet weak var RentTime: UITextField!
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // 結束編輯 把鍵盤隱藏起來
+        self.view.endEditing(true)
+        
+        return true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        RentTime.delegate = self
         // Do any additional setup after loading the view.
     }
 

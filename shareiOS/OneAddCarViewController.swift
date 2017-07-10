@@ -11,16 +11,26 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class OneAddCarViewController: UIViewController {
+class OneAddCarViewController: UIViewController, UITextFieldDelegate  {
 
+    // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
+    let uniqueString = NSUUID().uuidString
     
     var uid = ""
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // 結束編輯 把鍵盤隱藏起來
+        self.view.endEditing(true)
+        
+        return true
+    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        carNumber.delegate = self
+        others.delegate = self
         
         
         if let user = FIRAuth.auth()?.currentUser {
@@ -104,9 +114,6 @@ class OneAddCarViewController: UIViewController {
             
             if let carNum = carNumber.text{
                 
-                
-                let uniqueString = NSUUID().uuidString
-                print("UniqueString is \(uniqueString)")
                 
                 
                 
@@ -217,8 +224,7 @@ extension OneAddCarViewController: UIImagePickerControllerDelegate, UINavigation
             selectedImageFromPicker = pickedImage
         }
         
-        // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
-        let uniqueString = NSUUID().uuidString
+        
         
         //let uidNum = FIRAuth.auth()?.currentUser?.uid
         
@@ -250,7 +256,7 @@ extension OneAddCarViewController: UIImagePickerControllerDelegate, UINavigation
                             print("Photo Url: \(uploadImageUrl)")
                             
                             
-                            let databaseRef = FIRDatabase.database().reference(withPath: "Car/\(self.uid)/CarFile/Profile/Photo")
+                            let databaseRef = FIRDatabase.database().reference(withPath: "Cars/\(self.uid)/CarFile").child(self.uniqueString).child("CarImage")
                             
                             databaseRef.setValue(uploadImageUrl, withCompletionBlock: { (error, dataRef) in
                                 
