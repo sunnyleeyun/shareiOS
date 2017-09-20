@@ -6,5 +6,3 @@
 
 
 #### 此App包含：Map、Map Search Places、Firebase CRUD、TableView、Tableview Cell with Multiple Items & Firebase Combination、Camera and Picture、Log In with Facebook、Icon of the App added、Side Panel、Etc. ####
-
-### 註：此比賽初步版本，近期於Xamarin開發上架產品，敬請期待！ ###
